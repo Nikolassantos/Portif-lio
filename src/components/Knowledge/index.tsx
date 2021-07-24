@@ -7,11 +7,7 @@ function Knowledge() {
     <KnowledgeWrapper>
       <h1>Conhecimentos</h1>
       <CardBoxContainer>
-        <KnowledgeCard
-          tech="HTML5"
-          experience="6 mêses de experiência"
-          value={3}
-        >
+        <KnowledgeCard tech="HTML5" experience="1 ano de experiência" value={5}>
           <svg className="icons" viewBox="0 0 128 128">
             <path
               fill="#E44D26"
@@ -32,11 +28,7 @@ function Knowledge() {
             ></path>
           </svg>
         </KnowledgeCard>
-        <KnowledgeCard
-          tech="CSS3"
-          experience="6 mêses de experiência"
-          value={3}
-        >
+        <KnowledgeCard tech="CSS3" experience="1 ano de experiência" value={3}>
           <svg className="icons" viewBox="0 0 128 128">
             <path
               fill="#131313"
@@ -70,8 +62,8 @@ function Knowledge() {
         </KnowledgeCard>
         <KnowledgeCard
           tech="Javascript"
-          experience="6 mêses de experiência"
-          value={3}
+          experience="1 ano de experiência"
+          value={4}
         >
           <svg className="icons" viewBox="0 0 128 128">
             <path
@@ -204,8 +196,8 @@ function Knowledge() {
       <CardBoxContainer>
         <KnowledgeCard
           tech="NodeJS"
-          experience="6 mêses de experiência"
-          value={3}
+          experience="1 ano de experiência"
+          value={4}
         >
           <svg className="icons" viewBox="0 0 128 128">
             <path
@@ -216,8 +208,8 @@ function Knowledge() {
         </KnowledgeCard>
         <KnowledgeCard
           tech="React Native"
-          experience="6 mêses de experiência"
-          value={1}
+          experience="1 ano de experiência"
+          value={3}
         >
           <svg className="icons" viewBox="0 0 128 128">
             <g fill="#7159c1">
@@ -228,7 +220,7 @@ function Knowledge() {
         </KnowledgeCard>
         <KnowledgeCard
           tech="ReactJS"
-          experience="6 mêses de experiência"
+          experience="1 ano de experiência"
           value={3}
         >
           <svg className="icons" viewBox="0 0 128 128">

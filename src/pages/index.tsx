@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { FiGithub, FiLinkedin, FiTwitter } from 'react-icons/fi';
 import Button from '../components/Button';
 import PagePlaceholder from '../components/PagePlaceholder';
+
 import {
   ContentWrapper,
   ApresentationContainer,
@@ -20,8 +21,32 @@ import Knowledge from '../components/Knowledge';
 
 import { Player } from '@lottiefiles/react-lottie-player';
 import ProjectCard from '../components/ProjectCard';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+import { IRepository } from '../shared/interfaces/repositories';
 
 export default function Home() {
+  const [repositories, setRepositories] = useState<IRepository[]>([]);
+
+  function gitHubRepositories() {
+    (async () => {
+      const { data } = await axios.get(
+        'https://api.github.com/users/Nikolassantos/repos',
+        {
+          params: {
+            per_page: 5,
+          },
+        }
+      );
+
+      setRepositories(data);
+    })();
+  }
+
+  useEffect(gitHubRepositories, []);
+
+  console.log({ repositories });
+
   return (
     <div>
       <Head>
@@ -61,9 +86,7 @@ export default function Home() {
         </ContentWrapper>
         <AboutWrapper id="about">
           <h1>Sobre mim</h1>
-          <p>
-            {`I intend to become increasingly professional in Development, seeking to achieve my goals and fulfill my role in an objective and professional way.`}
-          </p>
+          <p>{`Pretendo me profissionalizar cada vez mais como Desenvolvedor na área de Desenvolvimento, buscando em primeiro lugar o conhecimento e atingir meus objetivos de forma objetiva e profissional.`}</p>
           <Button
             label="LinkedIn"
             link="https://www.linkedin.com/in/nikolassaantos/"
@@ -73,19 +96,17 @@ export default function Home() {
         </AboutWrapper>
         <ProjectsWrapper id="project">
           <Header>
-            <h1>Projects</h1>
+            <h1>Projetos</h1>
           </Header>
           <BoxContainer>
-            <ProjectCard
-              title="One page empresa"
-              desc="🏬 One page com informações sobre uma empresa."
-            />
-            <ProjectCard />
-            <ProjectCard />
-          </BoxContainer>
-          <BoxContainer>
-            <ProjectCard />
-            <ProjectCard />
+            {repositories.map((repository) => (
+              <ProjectCard
+                key={repository.id}
+                title={repository.name}
+                desc={repository.description}
+                url={repository.html_url}
+              />
+            ))}
           </BoxContainer>
 
           <FooterTitle>

@@ -4,17 +4,14 @@ import { CardBoxWrapper, Describe, Footer, Title } from './styles';
 import { ICardBox } from './types';
 import { FiLayout } from 'react-icons/fi';
 
-function ProjectCard({ title, desc }: ICardBox) {
+function ProjectCard({ title, desc, url }: ICardBox) {
   return (
     <CardBoxWrapper>
       <Title>{title || 'Em breve'}</Title>
       <Describe>{desc || 'Projeto em construção.'}</Describe>
       <Footer>
         <div className="background-button-container">
-          <Button
-            link="https://iuricode.github.io/one-page-company/"
-            label="WEBSITE"
-          >
+          <Button link={url} label="WEBSITE">
             <FiLayout className="icon" />
           </Button>
         </div>
