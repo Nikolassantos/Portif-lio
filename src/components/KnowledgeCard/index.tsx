@@ -2,7 +2,7 @@ import React from 'react';
 import { SecondCardBoxWrapper } from './styles';
 import ReactStars from 'react-stars';
 import { ISecondCardBox } from './types';
-import { colors } from '../../../styles/theme';
+import { colors } from '../../styles/theme';
 
 export const KnowledgeCard: React.FC<ISecondCardBox> = ({
   children,

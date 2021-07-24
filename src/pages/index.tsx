@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { FiGithub, FiLinkedin, FiTwitter } from 'react-icons/fi';
-import Button from './components/Button';
-import PagePlaceholder from './components/PagePlaceholder';
+import Button from '../components/Button';
+import PagePlaceholder from '../components/PagePlaceholder';
 import {
   ContentWrapper,
   ApresentationContainer,
@@ -14,12 +14,12 @@ import {
   FooterWrapper,
 } from '../styles/home';
 
-import HeaderComponent from './components/Header';
+import HeaderComponent from '../components/Header';
 
-import Knowledge from './components/Knowledge';
+import Knowledge from '../components/Knowledge';
 
 import { Player } from '@lottiefiles/react-lottie-player';
-import ProjectCard from './components/ProjectCard';
+import ProjectCard from '../components/ProjectCard';
 
 export default function Home() {
   return (
