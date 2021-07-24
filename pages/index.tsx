@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { FiGithub, FiLinkedin } from 'react-icons/fi';
+import { FiGithub, FiLinkedin, FiTwitter } from 'react-icons/fi';
 import Button from './components/Button';
 import PagePlaceholder from './components/PagePlaceholder';
 import {
@@ -11,9 +11,12 @@ import {
   BoxContainer,
   FooterTitle,
   Header,
+  FooterWrapper,
 } from '../styles/home';
 
 import HeaderComponent from './components/Header';
+
+import Knowledge from './components/Knowledge';
 
 import { Player } from '@lottiefiles/react-lottie-player';
 import ProjectCard from './components/ProjectCard';
@@ -94,9 +97,30 @@ export default function Home() {
             </a>
           </FooterTitle>
         </ProjectsWrapper>
+        <Knowledge />
       </main>
 
-      <footer>{/* <PagePlaceholder /> */}</footer>
+      <FooterWrapper>
+        <h4>Orgulhosamente feito por Nikolas Santos</h4>
+
+        <div>
+          <ul>
+            <li>
+              <a
+                target="__blank"
+                href="https://www.linkedin.com/in/nikolassaantos/"
+              >
+                <FiLinkedin size={25} color="#fff" />
+              </a>
+            </li>
+            <li>
+              <a target="__blank" href="https://twitter.com/Nikolassaantos">
+                <FiTwitter size={25} color="#fff" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </FooterWrapper>
     </div>
   );
 }
