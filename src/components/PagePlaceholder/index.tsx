@@ -6,7 +6,7 @@ function PagePlaceholder(): JSX.Element {
       autoplay
       loop
       src="https://assets5.lottiefiles.com/packages/lf20_cg9lvxff.json"
-      style={{ height: '500px', width: '500px' }}
+      style={{ height: '300px', width: '300px' }}
     />
   );
 }
