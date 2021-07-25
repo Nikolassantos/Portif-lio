@@ -7,7 +7,6 @@ function PagePlaceholder(): JSX.Element {
       loop
       src="https://assets5.lottiefiles.com/packages/lf20_cg9lvxff.json"
       style={{ height: '500px', width: '500px' }}
-      speed={0.4}
     />
   );
 }
